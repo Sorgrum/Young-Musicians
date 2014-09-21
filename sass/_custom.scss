@@ -1,5 +1,8 @@
 $white: #fff;
 $black: #000;
+$logo-yellow: #F7941D;
+$logo-red: #BF1E2E;
+$title-color: #A3A3A3;
 $border: 1px solid rgba(255, 255, 255, .4);
 
 $none: 0px;
@@ -24,9 +27,14 @@ body { background-color: $black; }
 .content p { color: $white; }
 
 
+// General Coloring
+.text_yellow { color: $logo-yellow; }
+
+
 // Navigation Bar
 #nav1 { 
 	max-width: 100%; 
+	padding-left: 1px;
 	background-color: $black;
 	border-bottom: $border;
 	@include respond(all-phones) {
@@ -34,6 +42,10 @@ body { background-color: $black; }
 	}
 }
 .navbar ul { float: right; }
+.navbar .logo a img { 
+	height: 60px; 
+	max-height: 100%;
+}
 
 // Slide Headers
 .content-title {
@@ -43,21 +55,33 @@ body { background-color: $black; }
 	background-color: $black;
 }
 .content-title div h2 {
+	color: $title-color;
+	font-size: 3.5em;
 	font-weight: bold;
 }
 
 // Mission Slide 
+.mission {
+	max-width: 80%;
+	background-color: $black;
+}
 .mission-img {
-	width: 40%;
+	width: 49%; // I might be horrible at basic math, but I'm not sure why this works
 	@include respond(all-phones) {
 		width: 80%;
 		margin-left: 10%;
 		margin-right: 10%;
 	}
 }
+	.mission-img img {
+		// Resize logo image
+		max-width: 115%;
+		margin-left: -24%;
+	}
 .mission-desc {
-	width: 40%;
-	margin-left: 10%;
+	width: 50%;
+	float: right;
+	margin-top: 1em;
 	@include respond(all-phones) {
 		width: 80%;
 		margin-top: 1em;
@@ -65,3 +89,6 @@ body { background-color: $black; }
 		margin-right: 10%;
 	}
 }
+	.mission-desc p:last-child {
+		text-align: center;
+	}

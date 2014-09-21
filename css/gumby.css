@@ -1695,17 +1695,27 @@ body { background-color: black; }
 
 .content p { color: white; }
 
-#nav1 { max-width: 100%; background-color: black; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+.text_yellow { color: #f7941d; }
+
+#nav1 { max-width: 100%; padding-left: 1px; background-color: black; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 @media only screen and (max-width: 767px) { #nav1 { margin-bottom: 0px; } }
 
 .navbar ul { float: right; }
 
+.navbar .logo a img { height: 60px; max-height: 100%; }
+
 .content-title { max-width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.4); border-bottom: 1px solid rgba(255, 255, 255, 0.4); background-color: black; }
 
-.content-title div h2 { font-weight: bold; }
+.content-title div h2 { color: #a3a3a3; font-size: 3.5em; font-weight: bold; }
 
-.mission-img { width: 40%; }
+.mission { max-width: 80%; background-color: black; }
+
+.mission-img { width: 49%; }
 @media only screen and (max-width: 767px) { .mission-img { width: 80%; margin-left: 10%; margin-right: 10%; } }
 
-.mission-desc { width: 40%; margin-left: 10%; }
+.mission-img img { max-width: 115%; margin-left: -24%; }
+
+.mission-desc { width: 50%; float: right; margin-top: 1em; }
 @media only screen and (max-width: 767px) { .mission-desc { width: 80%; margin-top: 1em; margin-left: 10%; margin-right: 10%; } }
+
+.mission-desc p:last-child { text-align: center; }

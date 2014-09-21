@@ -78,10 +78,10 @@
 					<img src="img/YM_Logo.jpg">
 				</div>
 				<div class="mission-desc">
-					<p>Mission - The mission of Young Musicians Org. is to enrich the lives of children and youth by providing free after-school music programs to schools with limited or no music programs.</p>
-					<p>Commitment - To raise another 25K in order to complete our six year program at Young Mens Prep Academy before we start working on a second school.</p>
-					<p>Goal - To expand our program to multiple schools across Miami-Dade County.</p>
-					<p>Hope - To motivate passionate philanthropists in our community to help us reach our goal.</p>
+					<p><span class="text_yellow">Mission</span> - The mission of Young Musicians Org. is to enrich the lives of children and youth by providing free after-school music programs to schools with limited or no music programs.</p>
+					<p><span class="text_yellow">Commitment</span> - To raise another 25K in order to complete our six year program at Young Mens Prep Academy before we start working on a second school.</p>
+					<p><span class="text_yellow">Goal</span> - To expand our program to multiple schools across Miami-Dade County.</p>
+					<p><span class="text_yellow">Hope</span> - To motivate passionate philanthropists in our community to help us reach our goal.</p>
 					<p>Every donation will make a difference in a child's life. Please join us in our mission.</p>
 				</div>
 			</article>
