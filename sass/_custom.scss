@@ -25,7 +25,10 @@ $default-padding: 20px;
 $navbar-height: 60px;
 
 $news-bg: url("../img/backgrounds/news.png");
-
+$donate-bg: url("../img/backgrounds/donate.jpg");
+$ryouth-bg: url("../img/backgrounds/ryouth.jpg");
+$ymp-bg: url("../img/backgrounds/YMP.jpeg");
+$contact-bg: url("../img/backgrounds/contact.jpg");
 
 // 1. Mixins
 ////////////////////////////////////////////////
@@ -167,7 +170,22 @@ body { background-color: $black; }
 	}
 
 // Donate Header
-.dontate-title { 
+.donate-title { 
 	// Allow background image to fit comfortably
 	margin-bottom: $none;
 }
+.donate-content { 
+	max-width: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	background: $donate-bg;
+	@include vendor-prefix(background-size, cover);
+}
+	.donate-onsite {
+		border: 1px solid $white;
+		background-color: rgba(72, 67, 11, 0.5);
+	}
+	.donate-paypal {
+		border: 1px solid $white;
+		background-color: rgba(16, 16, 116, 0.3);
+	}		

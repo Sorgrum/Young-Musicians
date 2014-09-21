@@ -1734,4 +1734,10 @@ body { background-color: black; }
 
 .news-entry a { float: left; padding: 0.8em; }
 
-.dontate-title { margin-bottom: 0px; }
+.donate-title { margin-bottom: 0px; }
+
+.donate-content { max-width: 100%; padding-top: 2em; padding-bottom: 2em; background: url("../img/backgrounds/donate.jpg"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.donate-onsite { border: 1px solid white; background-color: rgba(72, 67, 11, 0.5); }
+
+.donate-paypal { border: 1px solid white; background-color: rgba(16, 16, 116, 0.3); }

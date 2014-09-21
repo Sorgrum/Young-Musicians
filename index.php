@@ -70,7 +70,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="content-wrapper">
+	<div class="content-wrapper" id="sb-site">
 	<div class="row navbar content mission" id="mission">
 		<div class="twelve columns">
 			<article class="valign row">
@@ -190,7 +190,7 @@
 	<div class="row content donate-content">
 		<div class="twelve columns">
 			<div class="row">
-				<div class="eight columns centered">
+				<div class="ten columns centered">
 					<div class="six columns">
 						<div class="twelve columns centered">
 							<div class="xlarge btn metro rounded donate-onsite"><a class="toggle" id="toggle" gumby-trigger="#donate-panel" href="#">Donate Here</a></div>
@@ -414,7 +414,6 @@
 	<script src="js/main.js"></script>
 
 	<script type="text/javascript" src="bower_components/gallery/jquery.nanogallery.js"></script>
-	<script src="js/libs/scrollto/jquery.scrollTo.min.js"></script>
 	<script src="js/libs/card/lib/js/card.js"></script>
 
 	<!-- Change UA-XXXXX-X to be your site's ID -->
