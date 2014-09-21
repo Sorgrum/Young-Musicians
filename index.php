@@ -414,7 +414,7 @@
 	<script src="js/main.js"></script>
 
 	<script type="text/javascript" src="bower_components/gallery/jquery.nanogallery.js"></script>
-	<script src="js/libs/scrollto/jquery-scrollto.js"></script>
+	<script src="js/libs/scrollto/jquery.scrollTo.min.js"></script>
 	<script src="js/libs/card/lib/js/card.js"></script>
 
 	<!-- Change UA-XXXXX-X to be your site's ID -->
@@ -450,32 +450,32 @@
 		});
 	</script>
 	<script type="text/javascript">
-	// bind to toggles & switches trigger event
-	$('#toggle,#switch').on('gumby.onTrigger', function(e) {
-	  Gumby.debug('Toggle or Switch triggered');
-	  Gumby.initialize('skiplink', true);
-
-	    // dynamically trigger toggle/switch
-		}).trigger('gumby.trigger')
-
-		// re-initialize toggle/switch instance
-		.trigger('gumby.initialize');
+		// bind to toggles & switches trigger event
+		$('#toggle,#switch').on('gumby.onTrigger', function(e) {
+		  Gumby.debug('Toggle or Switch triggered');
+		  Gumby.initialize('skiplink', true);
+	
+		    // dynamically trigger toggle/switch
+			}).trigger('gumby.trigger')
+	
+			// re-initialize toggle/switch instance
+			.trigger('gumby.initialize');
 	</script>
 	<script>
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top-65
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
+		$('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+		        || location.hostname == this.hostname) {
+		
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		           if (target.length) {
+		             $('html,body').animate({
+		                 scrollTop: target.offset().top-60
+		            }, 1000);
+		            return false;
+		        }
+		    }
+		});
 	</script>
 </body>
 </html>
