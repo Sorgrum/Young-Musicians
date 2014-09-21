@@ -1685,8 +1685,6 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 
 .ie9 .radio.checked i, .ie9 .checkbox.checked i { top: 0; }
 
-body { background-color: black; }
-
 .content-wrapper { margin-top: 80px; }
 
 .centered { text-align: center; }
@@ -1695,7 +1693,11 @@ body { background-color: black; }
 
 .content p { color: white; }
 
+body { background-color: black; }
+
 .text_yellow { color: #f7941d; }
+
+.content { background-color: black; }
 
 #nav1 { max-width: 100%; padding-left: 1px; background-color: black; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 @media only screen and (max-width: 767px) { #nav1 { margin-bottom: 0px; } }
@@ -1719,3 +1721,17 @@ body { background-color: black; }
 @media only screen and (max-width: 767px) { .mission-desc { width: 80%; margin-top: 1em; margin-left: 10%; margin-right: 10%; } }
 
 .mission-desc p:last-child { text-align: center; }
+
+.news-title { margin-bottom: 0px; }
+
+.news-content { max-width: 100%; padding-top: 20px; padding-bottom: 20px; margin-bottom: 0px; background-image: url("../img/backgrounds/news.png"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.news-entry { border-radius: 3px; background-color: rgba(0, 0, 0, 0.5); margin-bottom: 20px; }
+
+.news-entry h4 { color: #f7941d; font-weight: bold; text-align: left; padding: 0.8em; padding-bottom: 0px; }
+
+.news-entry p { padding: 0.8em; color: #BABABA; }
+
+.news-entry a { float: left; padding: 0.8em; }
+
+.dontate-title { margin-bottom: 0px; }

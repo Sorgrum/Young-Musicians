@@ -1,17 +1,47 @@
+// _custom.scss
+// Written by Marcelo Gheiler
+
+// Table of Conents
+/////////////////////////////////////////////////
+//
+// Variables positioned at top for quick editing
+//
+// 1. Mixins
+// 2. General Positioning
+// 3. Slide Specific Styling
+// 
+
 $white: #fff;
 $black: #000;
 $logo-yellow: #F7941D;
 $logo-red: #BF1E2E;
 $title-color: #A3A3A3;
 $border: 1px solid rgba(255, 255, 255, .4);
+$news-entry: rgba(0, 0, 0, 0.5);
 
 $none: 0px;
+$default-margin: 20px;
+$default-padding: 20px;
 $navbar-height: 60px;
 
-body { background-color: $black; }
+$news-bg: url("../img/backgrounds/news.png");
 
 
-// General Positioning
+// 1. Mixins
+////////////////////////////////////////////////
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+
+
+// 2. General Positioning
+//////////////////////////////////////////////
+
 
 // Account for navbar height
 .content-wrapper {
@@ -27,8 +57,15 @@ body { background-color: $black; }
 .content p { color: $white; }
 
 
-// General Coloring
+// 3. General Coloring
+///////////////////////////////////////////
+
+body { background-color: $black; }
 .text_yellow { color: $logo-yellow; }
+.content { background-color: $black; }
+
+// 4. Slide Specific Styling
+//////////////////////////////////////////
 
 
 // Navigation Bar
@@ -92,3 +129,45 @@ body { background-color: $black; }
 	.mission-desc p:last-child {
 		text-align: center;
 	}
+
+
+// News Header
+.news-title { 
+	// Allow background image to fit comfortably
+	margin-bottom: $none;
+}
+// News Slide
+.news-content {
+	max-width: 100%;
+	padding-top: $default-padding;
+	padding-bottom: $default-padding;
+	margin-bottom: $none;
+	background-image: $news-bg;
+	@include vendor-prefix(background-size, cover);
+}
+.news-entry {
+	border-radius: 3px;
+	background-color: $news-entry;
+	margin-bottom: $default-margin;
+}
+	.news-entry h4 { 
+		color: $logo-yellow;
+		font-weight: bold;
+		text-align: left;
+		padding: 0.8em;
+		padding-bottom: 0px;
+	}
+	.news-entry p {
+		padding: 0.8em;
+		color: #BABABA;
+	}
+	.news-entry a { 
+		float: left;
+		padding: 0.8em;
+	}
+
+// Donate Header
+.dontate-title { 
+	// Allow background image to fit comfortably
+	margin-bottom: $none;
+}
