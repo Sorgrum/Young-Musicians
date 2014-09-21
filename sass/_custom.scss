@@ -1,5 +1,67 @@
 $white: #fff;
 $black: #000;
+$border: 1px solid rgba(255, 255, 255, .4);
+
+$none: 0px;
+$navbar-height: 60px;
 
 body { background-color: $black; }
+
+
+// General Positioning
+
+// Account for navbar height
+.content-wrapper {
+	margin-top: $navbar-height + 20;
+}
+
+// Center Navigation Bars
+.centered { text-align: center; }
+.centered h2 { text-align: center; }
+
+
+
 .content p { color: $white; }
+
+
+// Navigation Bar
+#nav1 { 
+	max-width: 100%; 
+	background-color: $black;
+	border-bottom: $border;
+	@include respond(all-phones) {
+		margin-bottom: $none;
+	}
+}
+.navbar ul { float: right; }
+
+// Slide Headers
+.content-title {
+	max-width: 100%;
+	border-top: $border;
+	border-bottom: $border;
+	background-color: $black;
+}
+.content-title div h2 {
+	font-weight: bold;
+}
+
+// Mission Slide 
+.mission-img {
+	width: 40%;
+	@include respond(all-phones) {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+.mission-desc {
+	width: 40%;
+	margin-left: 10%;
+	@include respond(all-phones) {
+		width: 80%;
+		margin-top: 1em;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}

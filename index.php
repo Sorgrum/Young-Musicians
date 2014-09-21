@@ -54,27 +54,28 @@
 					<a href="#">
 						<img src="img/ymlogo_small.jpg" />
 					</a>
-					</h1>
+				</h1>
 			</div>
-		<div class="ten columns">
-		<ul>
-			<li><a href="#mission">Mission</a></li>
-			<li><a href="#news">News</a></li>
-			<li><a href="#donate">Donate</a></li>
-			<li><a href="#photos">Photos</a></li>
-			<li><a href="#music-groups">Music Groups</a></li>
-			<li><a href="#donors">Donors</a></li>
-			<li><a href="#board-members">Our Board</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</ul>
-		</div>
+			<div class="ten columns">
+				<ul>
+					<li><a href="#mission">Mission</a></li>
+					<li><a href="#news">News</a></li>
+					<li><a href="#donate">Donate</a></li>
+					<li><a href="#photos">Photos</a></li>
+					<li><a href="#music-groups">Music Groups</a></li>
+					<li><a href="#donors">Donors</a></li>
+					<li><a href="#board-members">Our Board</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
+	<div class="content-wrapper">
 	<div class="row navbar content mission" id="mission">
 		<div class="twelve columns">
 			<article class="valign row">
 				<div class="mission-img">
-					<img src="img/YM_Logo.png">
+					<img src="img/YM_Logo.jpg">
 				</div>
 				<div class="mission-desc">
 					<p>Mission - The mission of Young Musicians Org. is to enrich the lives of children and youth by providing free after-school music programs to schools with limited or no music programs.</p>
@@ -349,7 +350,7 @@
 				</section>
 			</div>
 		</div>
-
+	</div>
 
 	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
 	<!-- 2.0 for modern browsers, 1.10 for .oldie -->

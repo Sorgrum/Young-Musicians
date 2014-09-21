@@ -1685,4 +1685,27 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 
 .ie9 .radio.checked i, .ie9 .checkbox.checked i { top: 0; }
 
+body { background-color: black; }
+
+.content-wrapper { margin-top: 80px; }
+
+.centered { text-align: center; }
+
+.centered h2 { text-align: center; }
+
 .content p { color: white; }
+
+#nav1 { max-width: 100%; background-color: black; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+@media only screen and (max-width: 767px) { #nav1 { margin-bottom: 0px; } }
+
+.navbar ul { float: right; }
+
+.content-title { max-width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.4); border-bottom: 1px solid rgba(255, 255, 255, 0.4); background-color: black; }
+
+.content-title div h2 { font-weight: bold; }
+
+.mission-img { width: 40%; }
+@media only screen and (max-width: 767px) { .mission-img { width: 80%; margin-left: 10%; margin-right: 10%; } }
+
+.mission-desc { width: 40%; margin-left: 10%; }
+@media only screen and (max-width: 767px) { .mission-desc { width: 80%; margin-top: 1em; margin-left: 10%; margin-right: 10%; } }
