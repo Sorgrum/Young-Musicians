@@ -40,7 +40,8 @@
 	<link rel="stylesheet" type="text/css" href="js/libs/card/lib/css/card.css">
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
-
+	<link rel="stylesheet" href="js/libs/switchery/dist/switchery.css" />
+	<script src="js/libs/switchery/dist/switchery.js"></script>
 	<script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
 
@@ -206,7 +207,7 @@
 			<div class="row card-section">
 				<div class="ten columns centered">
 					<div class="drawer" id="donate-panel">
-						<div class="drawer-content six columns centered">	
+						<div class="drawer-content ten columns centered">	
 							<div class="card-wrapper"></div>
 							<div class="form-container active">
 								<form action="">
@@ -229,6 +230,9 @@
 												<input class="input four columns" placeholder="Zip code" type="text" name="zip">
 												<input class="input three push_one columns" placeholder="State" type="text" name="state">
 												<input class="input three push_one columns" placeholder="Country" type="text" name="country">
+											</li>
+											<li class="field recurring-payment">
+												<input type="checkbox" class="switchery-switch" checked /><p>Recurring Monthly Payment</p>
 											</li>
 										</ul>
 									</div>
@@ -475,6 +479,10 @@
 		        }
 		    }
 		});
+	</script>
+	<script>
+		var elem = document.querySelector('.switchery-switch');
+		var switchery = new Switchery(elem);
 	</script>
 </body>
 </html>
