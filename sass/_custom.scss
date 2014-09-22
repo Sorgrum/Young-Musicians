@@ -270,3 +270,33 @@ body { background-color: $black; }
 .ryouth-content.row {
 	max-width: 100%;
 }
+
+// Board Members Header
+.content-title.board-title {
+	margin-bottom: $none;
+}
+// Board Members Content
+.board-members {
+	max-width: 100%;
+	padding: $none;
+}
+	.board-members div {
+		max-width: 100%;
+	}
+	.member-1, .member-3 {
+		background-color: #333;
+	}
+.board-picture  img {
+	border-radius: 50%;
+	width: 300px;
+}
+
+.member-odd-desc {
+	margin-left: 15%;
+}
+.member-even-desc {
+	margin-right: 15%;
+}
+.member-desc h4 {
+	color: $logo-yellow;
+}

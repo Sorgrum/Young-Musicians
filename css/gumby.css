@@ -1775,3 +1775,19 @@ body { background-color: black; }
 .ryouth-content { background: url("../img/backgrounds/ryouth.jpg"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 .ryouth-content.row { max-width: 100%; }
+
+.content-title.board-title { margin-bottom: 0px; }
+
+.board-members { max-width: 100%; padding: 0px; }
+
+.board-members div { max-width: 100%; }
+
+.member-1, .member-3 { background-color: #333; }
+
+.board-picture img { border-radius: 50%; width: 300px; }
+
+.member-odd-desc { margin-left: 15%; }
+
+.member-even-desc { margin-right: 15%; }
+
+.member-desc h4 { color: #f7941d; }

@@ -301,54 +301,35 @@
 	</div>
 	<div class="row content board-members">
 		<div class="twelve columns">
-			<div class="row content">
+			<div class="row content member-1">
 				<section class="twelve columns board-entry">
 					<article class="valign row">
 						<div class="board-member-1 board-picture">
-							<img src="http://placehold.it/300x300" />
+							<img src="img/Board-SammyGonzales.png" />
 						</div>
-						<div>
+						<div class="member-odd-desc member-desc">
 							<h4>Sammy Gonzalez</h4>
 							<p>Director and Music Director, and more of a description goes in here.</p>
 						</div>
 					</article>
 				</section>
 			</div>
-			<div class="row content">
-				<section class="twelve columns board-entry">
+			<div class="row content member-2">
+				<section class="six centered columns board-entry">
 					<article class="valign row">
-						<div>
+						<div class="member-desc">
 							<h4>Virginia Akar</h4>
 							<p>Director, and more of a description goes over here.</p>
 						</div>
-						<div class="board-member-2 board-picture">
-							<img src="http://placehold.it/300x300" />
-						</div>
 					</article>
 				</section>
 			</div>
-			<div class="row content">
-				<section class="twelve columns board-entry">
+			<div class="row content member-3">
+				<section class="six centered columns board-entry">
 					<article class="valign row">
-						<div class="board-member-3 board-picture">
-							<img src="http://placehold.it/300x300" />
-						</div>
-						<div>
+						<div class="member-desc">
 							<h4>Jefferey Miller</h4>
 							<p>Chairman, and more of a description goes into here.</p>
-						</div>
-					</article>
-				</section>
-			</div>
-			<div class="row content">
-				<section class="twelve columns board-entry">
-					<article class="valign row">
-						<div>
-							<h4>Jean Espiritusanto</h4>
-							<p>Music Director, and more of a descripting goes under here.<p>
-						</div>
-						<div class="board-member-4 board-picture">
-							<img src="http://placehold.it/300x300" />
 						</div>
 					</article>
 				</section>
