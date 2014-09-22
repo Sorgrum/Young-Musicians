@@ -260,12 +260,24 @@
 			<a href="img/gallery/ryouth/7.jpg" data-ngthumb="img/gallery/thumbs/7_thumb.jpg" data-ngdesc="Reckless Youth manager teaching Young Musicians.">Reckless Youth</a>
 		</div>
 	</div>
-	<div class="row navbar content-title band-title" id="music-groups">
+    <div class="row navbar content-title band-title" id="music-groups">
+        <div class="ten columns centered">
+            <h2 class="centered">Young Mens Prep Academy</h2>
+        </div>
+    </div>
+    <div class="row navbar content band-members ymp-content">
+        <div class="inview six columns centered band-members-list" gumby-classname="onscreen" gumby-offset="200">
+            <div class="twelve columns band-members-list-desc">
+                <p>Young Mens Prep. Academy's band department is sponsored and taught by Reckless Youth</p>
+            </div>
+        </div>
+    </div>
+	<div class="row navbar content-title band-title">
 		<div class="ten columns centered">
 			<h2 class="centered">Reckless Youth</h2>
 		</div>
 	</div>
-	<div class="row navbar content band-members">
+	<div class="row navbar content band-members ryouth-content">
 		<div class="inview six columns centered band-members-list" gumby-classname="onscreen" gumby-offset="200">
 			<div class="seven columns band-members-list-desc">
 				<p>In 2012, a group of 5 teens at Ransom Everglades School in Coconut Grove formed a charity rock band in order to make music lessons available to kids of all economic means. These teens realized how fortunate they were to have music in their lives and knew that they had to do something to make it more available in schools, in spite of budget cuts. They began their fundraising by hosting mini-concerts and parties, and eventually were able to fully fund the first 2 years of the music program at the Young Men's Prep Academy. The band's goal is to raise enough money to fund the entire 6-year program for the class of 2019. 100% of the proceeds they raise goes to Young Musicians to fund the program.</p>
@@ -278,18 +290,6 @@
 				<p>The Singer</p>
 				<p>The Drummer</p>
 				<p>The Guitarist</p>
-			</div>
-		</div>
-	</div>
-	<div class="row navbar content-title band-title">
-		<div class="ten columns centered">
-			<h2 class="centered">Young Mens Prep Academy</h2>
-		</div>
-	</div>
-	<div class="row navbar content band-members">
-		<div class="inview six columns centered band-members-list" gumby-classname="onscreen" gumby-offset="200">
-			<div class="twelve columns band-members-list-desc">
-				<p>Young Mens Prep. Academy's band department is sponsoered and taught by Reckless Youth</p>
 			</div>
 		</div>
 	</div>

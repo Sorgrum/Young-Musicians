@@ -230,3 +230,43 @@ body { background-color: $black; }
 		line-height: 1.75em;
 		color: black;
 	}
+// Band Members General Styling
+.band-title {
+    margin-bottom: $none;
+}
+.band-members {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	margin-bottom: $none;
+}
+	.band-members-list {
+		visiblity: hidden;
+		padding: 1em;
+		border-radius: 10px;
+		border: 5px solid $white;
+		background-color: $white;
+		background-color: rgba(255, 255, 255, 0.75);
+	}
+		.band-members-list div p {
+			color: $black;
+		}
+		.band-members-list.onscreen {
+			visibility: visible;
+		}
+// Young Mens Prep Content
+.ymp-content {
+	background: $ymp-bg;
+	@include vendor-prefix(background-size, cover);
+}
+.ymp-content.row {
+	max-width: 100%;
+}
+
+// Reckless Content
+.ryouth-content {
+	background: $ryouth-bg;
+	@include vendor-prefix(background-size, cover);
+}
+.ryouth-content.row {
+	max-width: 100%;
+}

@@ -1757,3 +1757,21 @@ body { background-color: black; }
 .recurring-payment span { float: left; }
 
 .recurring-payment p { float: left; display: inline-block; margin-left: 3%; margin-bottom: 0px; line-height: 1.75em; color: black; }
+
+.band-title { margin-bottom: 0px; }
+
+.band-members { padding-top: 10%; padding-bottom: 10%; margin-bottom: 0px; }
+
+.band-members-list { visiblity: hidden; padding: 1em; border-radius: 10px; border: 5px solid white; background-color: white; background-color: rgba(255, 255, 255, 0.75); }
+
+.band-members-list div p { color: black; }
+
+.band-members-list.onscreen { visibility: visible; }
+
+.ymp-content { background: url("../img/backgrounds/YMP.jpeg"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.ymp-content.row { max-width: 100%; }
+
+.ryouth-content { background: url("../img/backgrounds/ryouth.jpg"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+.ryouth-content.row { max-width: 100%; }
