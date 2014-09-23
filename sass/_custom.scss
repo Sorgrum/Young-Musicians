@@ -65,6 +65,7 @@ $contact-bg: url("../img/backgrounds/contact.jpg");
 
 body { background-color: $black; }
 .text_yellow { color: $logo-yellow; }
+.text_white { color: $white; }
 .content { background-color: $black; }
 
 // 4. Slide Specific Styling
@@ -79,6 +80,9 @@ body { background-color: $black; }
 	border-bottom: $border;
 	@include respond(all-phones) {
 		margin-bottom: $none;
+	}
+	& li a:hover {
+		background-color: $logo-yellow;
 	}
 }
 .navbar ul { float: right; }
@@ -212,6 +216,11 @@ body { background-color: $black; }
 }
 .card.identified .front {
 	background-color: $black;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.card.identified .back {
+	background-color: $black;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .recurring-payment {
 	padding: 0.4em;
@@ -299,4 +308,30 @@ body { background-color: $black; }
 }
 .member-desc h4 {
 	color: $logo-yellow;
+}
+// Contact Header
+.contact-title {
+	margin-bottom: $none;
+}
+// Contact Content
+.contact-content {
+	padding: 5% 0px;
+	max-width: 100%;
+	background: $contact-bg;
+	@include vendor-prefix(background-position, cover);
+
+	.contact-img {
+		max-width: 450px;
+	}
+	.contact-desc {
+		text-align: right;
+		margin-left: 30%;
+
+		h4 {
+			color: $logo-yellow;
+		}
+		p {
+			margin-bottom: 2px;
+		}
+	}
 }

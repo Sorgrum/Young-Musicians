@@ -1697,10 +1697,13 @@ body { background-color: black; }
 
 .text_yellow { color: #f7941d; }
 
+.text_white { color: white; }
+
 .content { background-color: black; }
 
 #nav1 { max-width: 100%; padding-left: 1px; background-color: black; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 @media only screen and (max-width: 767px) { #nav1 { margin-bottom: 0px; } }
+#nav1 li a:hover { background-color: #f7941d; }
 
 .navbar ul { float: right; }
 
@@ -1750,7 +1753,9 @@ body { background-color: black; }
 
 .form-container .field:last-child { margin-bottom: 0px; }
 
-.card.identified .front { background-color: black; }
+.card.identified .front { background-color: black; background-color: rgba(0, 0, 0, 0.5); }
+
+.card.identified .back { background-color: black; background-color: rgba(0, 0, 0, 0.5); }
 
 .recurring-payment { padding: 0.4em; background-color: white; background-color: rgba(255, 255, 255, 0.75); border-radius: 4px; }
 
@@ -1791,3 +1796,11 @@ body { background-color: black; }
 .member-even-desc { margin-right: 15%; }
 
 .member-desc h4 { color: #f7941d; }
+
+.contact-title { margin-bottom: 0px; }
+
+.contact-content { padding: 5% 0px; max-width: 100%; background: url("../img/backgrounds/contact.jpg"); -webkit-background-position: cover; -ms-background-position: cover; -moz-background-position: cover; -o-background-position: cover; background-position: cover; }
+.contact-content .contact-img { max-width: 450px; }
+.contact-content .contact-desc { text-align: right; margin-left: 30%; }
+.contact-content .contact-desc h4 { color: #f7941d; }
+.contact-content .contact-desc p { margin-bottom: 2px; }

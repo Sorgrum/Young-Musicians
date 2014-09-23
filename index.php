@@ -336,7 +336,44 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="row navbar content-title contact-title" id="contact">
+		<div class="ten columns centered">
+			<h2 class="centered">
+				Contact Us
+			</h2>
+		</div>
+	</div>
+	<div class="row contact-content">
+		<section class="twelve columns">
+			<article class="valign row">
+				<div class="contact-img">
+					<img src="img/contact.jpg" />
+				</div>
+				<div class="contact-desc">
+					<h4>Inquiries for</h4>
+					<br />
+					<p>General:</p>
+					<p class="text_white">Info@YoungMusicians.us</p>
+					<br />
+					<br />
+					<p>Donations:</p>
+					<p class="text_white">Donate@YoungMusicians.us</p>
+					<br />
+					<br />
+					<p>Music Program:</p>
+					<p class="text_white">Sgclassical@yahoo.com</p>
+					<p>Sammy Gonzalez</p>
+					<p>Music Director</p>
+					<br />
+					<br />
+					<p>General Program:</p>
+					<p class="text_white">Virginia@YoungMusicians.us</p>
+					<p>Virginia Akar</p>
+					<p>Director</p>
+				</div>
+			</article>
+		</section>
+	</div>
 	<!-- Grab Google CDN's jQuery, fall back to local if offline -->
 	<!-- 2.0 for modern browsers, 1.10 for .oldie -->
 	<script>
