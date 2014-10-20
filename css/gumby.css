@@ -1699,6 +1699,8 @@ body { background-color: black; }
 
 .text_white { color: white; }
 
+.text_blue { color: blue; }
+
 .content { background-color: black; }
 
 #nav1 { max-width: 100%; padding-left: 1px; background-color: black; border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
@@ -1725,6 +1727,28 @@ body { background-color: black; }
 
 .mission-desc p:last-child { text-align: center; }
 
+.social-aspects { margin-left: 0px; }
+
+.mailing-list { margin-top: 6px; }
+.mailing-list div { display: inline; }
+.mailing-list div img { position: absolute; padding-left: 6px; padding-top: 2px; }
+
+.mailing-list span { color: #A2A2A2; margin-right: 0.2em; }
+
+.mailing-list input { height: 36px; width: 60%; color: white; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 3px; background-color: black; padding-left: 8px; }
+
+.soc-icon { margin-top: 8px; }
+
+.about-us-content-title { font-weight: 600; font-size: 2em; color: white; }
+
+.about-us-desc { text-align: left; margin-bottom: 1.5em; margin-top: 0.7em; line-height: 1.4em; }
+
+.music-matters-title { margin-top: 0.5em; }
+
+.music-matters p { text-align: left; margin-top: 0.7em; }
+
+.music-matters li { text-align: left; margin-left: 4em; color: white; }
+
 .news-title { margin-bottom: 0px; }
 
 .news-content { max-width: 100%; padding-top: 20px; padding-bottom: 20px; margin-bottom: 0px; background-image: url("../img/backgrounds/news.png"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
@@ -1737,6 +1761,12 @@ body { background-color: black; }
 
 .news-entry a { float: left; padding: 0.8em; }
 
+#news-drawer.active { display: initial; }
+
+#news-drawer-toggle { display: initial; cursor: pointer; }
+
+#news-drawer-toggle.active { display: none; }
+
 .donate-title { margin-bottom: 0px; }
 
 .donate-content { max-width: 100%; padding-top: 2em; padding-bottom: 2em; background: url("../img/backgrounds/donate.jpg"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
@@ -1744,6 +1774,9 @@ body { background-color: black; }
 .donate-onsite { border: 1px solid white; background-color: rgba(72, 67, 11, 0.5); }
 
 .donate-paypal { border: 1px solid white; background-color: rgba(16, 16, 116, 0.3); }
+
+.tax-statement { margin-top: 1.9em; }
+.tax-statement p { font-size: 0.65rem; margin-bottom: 0px; }
 
 .drawer { background: initial; box-shadow: initial; }
 
@@ -1787,7 +1820,11 @@ body { background-color: black; }
 
 .board-members div { max-width: 100%; }
 
-.member-1, .member-3 { background-color: #333; }
+.member-1, .member-3 { background-color: black; }
+
+.member-2 { background-color: #212121; }
+
+.second-member { margin-top: 2.5em; }
 
 .board-picture img { border-radius: 50%; width: 300px; }
 
@@ -1797,10 +1834,14 @@ body { background-color: black; }
 
 .member-desc h4 { color: #f7941d; }
 
+.member-desc p { text-align: center; font-size: 1.2em; }
+
 .contact-title { margin-bottom: 0px; }
 
 .contact-content { padding: 5% 0px; max-width: 100%; background: url("../img/backgrounds/contact.jpg"); -webkit-background-position: cover; -ms-background-position: cover; -moz-background-position: cover; -o-background-position: cover; background-position: cover; }
 .contact-content .contact-img { max-width: 450px; }
-.contact-content .contact-desc { text-align: right; margin-left: 30%; }
+.contact-content .contact-desc { text-align: right; }
 .contact-content .contact-desc h4 { color: #f7941d; }
-.contact-content .contact-desc p { margin-bottom: 2px; }
+.contact-content .contact-desc p { margin-bottom: 2px; color: #f7941d; }
+
+.italicized { font-style: italic; }

@@ -60,10 +60,11 @@
 			<div class="ten columns">
 				<ul>
 					<li><a href="#mission">Mission</a></li>
-					<li><a href="#news">News</a></li>
+					<li><a href="#about-us">About Us</a></li>
 					<li><a href="#donate">Donate</a></li>
+					<li><a href="#news">News</a></li>
 					<li><a href="#photos">Photos</a></li>
-					<li><a href="#music-groups">Music Groups</a></li>
+					<li><a href="#music-groups">Musicians</a></li>
 					<li><a href="#donors">Donors</a></li>
 					<li><a href="#board-members">Our Board</a></li>
 					<li><a href="#contact">Contact</a></li>
@@ -79,13 +80,84 @@
 					<img src="img/YM_Logo.jpg">
 				</div>
 				<div class="mission-desc">
-					<p><span class="text_yellow">Mission</span> - The mission of Young Musicians Org. is to enrich the lives of children and youth by providing free after-school music programs to schools with limited or no music programs.</p>
-					<p><span class="text_yellow">Commitment</span> - To raise another 25K in order to complete our six year program at Young Mens Prep Academy before we start working on a second school.</p>
-					<p><span class="text_yellow">Goal</span> - To expand our program to multiple schools across Miami-Dade County.</p>
-					<p><span class="text_yellow">Hope</span> - To motivate passionate philanthropists in our community to help us reach our goal.</p>
+					<p><span class="text_yellow">Mission</span> - To enrich the lives of children by providing free after-school music programs in schools  with limited or no music instruction.</p>
+					<p><span class="text_yellow">Belief</span> - To enrich the lives of children by providing free after-school music programs in schools  with limited or no music instruction.</p>
+
+					<p><span class="text_yellow">Goal</span> - To provide music education to passionate young people who would otherwise miss the opportunity by expanding our program – one school at a time.</p>
+					<p><span class="text_yellow">Hope</span> - To motivate people and organizations in our community to help us accomplish our mission. </p>
 					<p>Every donation will make a difference in a child's life. Please join us in our mission.</p>
 				</div>
 			</article>
+		</div>
+			<div class="social-aspects six columns">
+				<div class="row">
+					<div class="twelve columns mailing-list">
+						<div><span>Join Mailing List:</span></div>
+						<div><input type="email" placeholder="johnsmith@email.com" /></div>
+						<div><img src="img/icon.png" /></div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="row navbar content-title about-us-title" id="about-us">
+		<div class="four columns centered">
+			<h2 class="centered">About Us</h2>
+		</div>
+	</div>
+	<div class="row navbar content about-us-content">
+		<div class="row">
+			<div class="five columns push_seven">
+				<p class="italicized">"I have said many times—if I hadn’t been exposed to music as a child I don’t think I would have been president.”</p>
+				<p class="text-right">-Bill Clinton</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns">
+				<h2 class="about-us-content-title centered">Who We Are</h2>
+			</div>
+			<div class="eight columns centered">
+				<p class="about-us-desc">&nbsp;&nbsp;&nbsp;&nbsp;Young Musicians is a non-profit organization in Miami-Dade County dedicated to providing free after-school music programs to passionate youth in schools with limited or no music instruction. We adopt one school at a time and commit to staying with our young musicians until they graduate (4 to 6 years). Our high-quality intensive music program is opening the doors to music education in our community and paving the way towards college music scholarships.</p>
+			</div>
+			<div class="row">
+				<div class="twelve columns music-matters-title">
+					<h2 class="about-us-content-title centered">Why Does Music Matter?</h2>
+				</div>
+				<div class="eight columns centered music-matters">
+					<p>&nbsp;&nbsp;&nbsp;Research shows that music enhances learning by nourishing our cognitive, sensory, attention, emotional and motor capacities – the driving forces behind ALL other learning.  Indeed, kids who study music benefit from:</p>
+					<li>Superior grades and higher graduation rates</li>
+					<li>Better SAT scores and chances of going to college</li>
+					<li>Enhanced critical and creative thinking skills</li>
+					<li>Better cooperation and teamwork skills</li>
+					<li>Reduced risky behaviors such as substance abuse</li>
+					<li>Greater discipline and understanding of the value of hard work</li>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="row navbar content-title donate-title" id="donate">
+		<div class="four columns centered">
+			<h2 class="centered">Donate</h2>
+		</div>
+	</div>
+	<div class="row content donate-content">
+		<div class="twelve columns">
+			<div class="row">
+				<div class="ten columns centered">
+					<div class="six columns centered">
+						<div class="twelve columns centered">
+							<div class="xlarge btn metro rounded donate-paypal"><a href="#">Donate on PayPal</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ten columns centered">
+					<div class="eight columns centered tax-statement">
+						<p>Established in 2011, Young Musicians is a 501(c)(3) organization; all donations are tax-deductible to the full extent permitted by law.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -98,7 +170,7 @@
 		<div class="four columns centered news-feed">
 			<div class="row">
 				<div class="twelve columns news-entry">
-					<h4>7/01/14 YOUNG MUSICIANS SUMMER GUTIAR CAMP</h4>
+					<h4>7/01/14 YOUNG MUSICIANS SUMMER GUITAR CAMP</h4>
 					<p>For the month of July Young Musicians will be holding guitar club at Young Mens Prep. </p>
 				</div>
 			</div>
@@ -127,62 +199,83 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>3/25/14 YOUNG MENS GUITAR CLUB GIVING BACK</h4>
-					<p>Young Mens Guitar Club will be playing at Aloma Retirement Home. 1030A</p>
+				<div class="twelve columns">
+					<div class="row">
+						<div class="twelve columns centered">
+							<a class="toggle" id="news-drawer-toggle" gumby-on="click" gumby-trigger="#news-drawer">More...</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>3/01/14 LIGHT BOX FUNDRAISER (6k+)</h4>
-					<p>A big thanks to everyone for coming out to our show at the Light Box. We had 200+ people show up and rasied 6K+.<br />THANK YOU!</p>
+			<div class="drawer" id="news-drawer">
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>3/25/14 YOUNG MENS GUITAR CLUB GIVING BACK</h4>
+						<p>Young Mens Guitar Club will be playing at Aloma Retirement Home. 1030A</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>2/27/14 PRESS TUFF GNARL</h4>
-					<p>YOUNG MUSICIANS’ ANNUAL FUNDRAISER THIS FRIDAY AT THE LIGHTBOX IN WYNWOOD</p>
-					<a href="http://www.tuffgnarl.com/young-musicians-annual-fundraiser-this-friday-at-the-light-box-in-wynwood/">Read More</a>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>3/01/14 LIGHT BOX FUNDRAISER (6k+)</h4>
+						<p>A big thanks to everyone for coming out to our show at the Light Box. We had 200+ people show up and rasied 6K+.<br />THANK YOU!</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>02/28/14 SHOW EVENT FUNDRAISER</h4>
-					<p>Come out to the LIGHT BOX for Young Musicians annual fundraiser. We have Reckless Youth &amp; DJ Miller (better known as papa smoove daddy) performing though out the night. 100% of proceeds help fund and create free after-school guitar programs. <br /><br />
-					LIGHT BOX: 404 NW 26th St Miami FL 33127
-					</p>
-					<a href="https://www.facebook.com/events/617146471692138/">YOUNG MUSICIANS @ LIGHT BOX (WYNWOOD)</a>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>2/27/14 PRESS TUFF GNARL</h4>
+						<p>YOUNG MUSICIANS’ ANNUAL FUNDRAISER THIS FRIDAY AT THE LIGHTBOX IN WYNWOOD</p>
+						<a href="http://www.tuffgnarl.com/young-musicians-annual-fundraiser-this-friday-at-the-light-box-in-wynwood/">Read More</a>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>02/08/14 PERFORMANCE</h4>
-					<p>RECKLESS YOUTH Perform at Temple Beth Shalom's Honoring of Sue Miller</p>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>02/28/14 SHOW EVENT FUNDRAISER</h4>
+						<p>Come out to the LIGHT BOX for Young Musicians annual fundraiser. We have Reckless Youth &amp; DJ Miller (better known as papa smoove daddy) performing though out the night. 100% of proceeds help fund and create free after-school guitar programs. <br /><br />
+						LIGHT BOX: 404 NW 26th St Miami FL 33127
+						</p>
+						<a href="https://www.facebook.com/events/617146471692138/">YOUNG MUSICIANS @ LIGHT BOX (WYNWOOD)</a>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>1/24/14 PRESS MIAMI NEW TIMES</h4>
-					<p>Co-Director Sammy Gonzalez has been written up in The Miami New Times</p>
-					<a href="http://blogs.browardpalmbeach.com/countygrind/2014/01/guitar_virtuoso_sammy_gonzalez.php">"Sammy Gonzalez Keeps Classical Guitar Alive"</a>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>02/08/14 PERFORMANCE</h4>
+						<p>RECKLESS YOUTH Perform at Temple Beth Shalom's Honoring of Sue Miller</p>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>01/06/14 BACK TO SCHOOL</h4>
-					<p>Young Mens Prep Academy Back in Session.</p>
-					<p>15 Guitar Players, Drums, Bass, &amp; Keys.</p>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>1/24/14 PRESS MIAMI NEW TIMES</h4>
+						<p>Co-Director Sammy Gonzalez has been written up in The Miami New Times</p>
+						<a href="http://blogs.browardpalmbeach.com/countygrind/2014/01/guitar_virtuoso_sammy_gonzalez.php">"Sammy Gonzalez Keeps Classical Guitar Alive"</a>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>10/15/13 PRESS CHANNEL 10</h4>
-					<p>YOUNG MUSICIANS ARE "CHANNEL 10's SUMMER SERVICE AEWARD WINNERS"</p>
-					<a href="http://www.local10.com/news/reckless-youth-help-fund-afterschool-music-program/22441816">Read Article</a>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>01/06/14 BACK TO SCHOOL</h4>
+						<p>Young Mens Prep Academy Back in Session.</p>
+						<p>15 Guitar Players, Drums, Bass, &amp; Keys.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>10/15/13 PRESS CHANNEL 10</h4>
+						<p>YOUNG MUSICIANS ARE "CHANNEL 10's SUMMER SERVICE AEWARD WINNERS"</p>
+						<a href="http://www.local10.com/news/reckless-youth-help-fund-afterschool-music-program/22441816">Read Article</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<div class="row">
+							<div class="twelve columns centered">
+								<a class="toggle" id="news-drawer-toggle" gumby-on="click" gumby-trigger="#news-drawer">Less...</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+<!-- Old donate section with card and onsite payment		
 	<div class="row navbar content-title donate-title" id="donate">
 		<div class="four columns centered">
 			<h2 class="centered">Donate</h2>
@@ -192,13 +285,15 @@
 		<div class="twelve columns">
 			<div class="row">
 				<div class="ten columns centered">
+					
 					<div class="six columns">
 						<div class="twelve columns centered">
 							<div class="xlarge btn metro rounded donate-onsite"><a class="toggle" id="toggle" gumby-trigger="#donate-panel" href="#">Donate Here</a></div>
 						</div>
 					</div>
-					<div class="six columns">
-						<div class="twelve columnc centered">
+					
+					<div class="six columns centered">
+						<div class="twelve columns centered">
 							<div class="xlarge btn metro rounded donate-paypal"><a href="#">Donate on PayPal</a></div>
 						</div>
 					</div>
@@ -241,9 +336,10 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
 	</div>
+	-->
 	<div class="row navbar content-title photos-title" id="photos">
 		<div class="four columns centered">
 			<h2 class="centered">Photos</h2>
@@ -251,15 +347,30 @@
 	</div>
 	<div class="row content photos-content">
 		<div id="gallery">
-			<a href="img/gallery/ryouth/1.jpg" data-ngthumb="img/gallery/thumbs/1_thumb.jpg" data-ngdesc="Kane Akar, Anthony Miller, and Cristi Schlesinger (left to right) jamming out.">Reckless Youth</a>
-			<a href="img/gallery/ryouth/2.jpg" data-ngthumb="img/gallery/thumbs/2_thumb.jpg" data-ngdesc="Young Musicians and Reckless Youth playing together.">Young Musicians & Reckless Youth</a>
-			<a href="img/gallery/ryouth/3.jpg" data-ngthumb="img/gallery/thumbs/3_thumb.jpg" data-ngdesc="Young Musicians and Reckless Youth manager Sammy Gonzalez and Cristi Schlesinger playing.">Young Musicians & Reckless Youth</a>
-			<a href="img/gallery/ryouth/4.jpg" data-ngthumb="img/gallery/thumbs/4_thumb.jpg" data-ngdesc="Young Musicians posing for a picture together.">Young Musicians & Reckless Youth</a>
-			<a href="img/gallery/ryouth/5.jpg" data-ngthumb="img/gallery/thumbs/5_thumb.jpg" data-ngdesc="Reckless Youth pianist Luke Civantos teaching a member of Young Mens Prep.">Young Musicians & Reckless Youth</a>
-			<a href="img/gallery/ryouth/6.jpg" data-ngthumb="img/gallery/thumbs/6_thumb.jpg" data-ngdesc="Reckless Youth relaxing.">Reckless Youth</a>
-			<a href="img/gallery/ryouth/7.jpg" data-ngthumb="img/gallery/thumbs/7_thumb.jpg" data-ngdesc="Reckless Youth manager teaching Young Musicians.">Reckless Youth</a>
+			<a href="img/gallery/8.jpg" data-ngthumb="img/gallery/8_thumb.jpg"></a>
+			<a href="img/gallery/9.jpg" data-ngthumb="img/gallery/9_thumb.jpg"></a>
+			<a href="img/gallery/10.jpg" data-ngthumb="img/gallery/10_thumb.jpg"></a>
+			<a href="img/gallery/11.jpg" data-ngthumb="img/gallery/11_thumb.jpg"></a>
+			<a href="img/gallery/12.jpg" data-ngthumb="img/gallery/12_thumb.jpg"></a>
+			<a href="img/gallery/13.jpg" data-ngthumb="img/gallery/13_thumb.jpg"></a>
+			<a href="img/gallery/14.jpg" data-ngthumb="img/gallery/14_thumb.jpg"></a>
+			<a href="img/gallery/15.jpg" data-ngthumb="img/gallery/15_thumb.jpg"></a>
+			<a href="img/gallery/16.jpg" data-ngthumb="img/gallery/16_thumb.jpg"></a>
+			<a href="img/gallery/17.jpg" data-ngthumb="img/gallery/17_thumb.jpg"></a>
+			<a href="img/gallery/18.jpg" data-ngthumb="img/gallery/18_thumb.jpg"></a>
+			<a href="img/gallery/19.jpg" data-ngthumb="img/gallery/19_thumb.jpg"></a>
+			<a href="img/gallery/20.jpg" data-ngthumb="img/gallery/20_thumb.jpg"></a>
+			<a href="img/gallery/21.jpg" data-ngthumb="img/gallery/21_thumb.jpg"></a>
+			<a href="img/gallery/22.jpg" data-ngthumb="img/gallery/22_thumb.jpg"></a>
+			<a href="img/gallery/23.jpg" data-ngthumb="img/gallery/23_thumb.jpg"></a>
+			<a href="img/gallery/24.jpg" data-ngthumb="img/gallery/24_thumb.jpg"></a>
+			<a href="img/gallery/25.jpg" data-ngthumb="img/gallery/25_thumb.jpg"></a>
+			<a href="img/gallery/26.jpg" data-ngthumb="img/gallery/26_thumb.jpg"></a>
+			<a href="img/gallery/27.jpg" data-ngthumb="img/gallery/27_thumb.jpg"></a>
+<!-- Working with spacing			<a href="img/gallery/28.jpg" data-ngthumb="img/gallery/28_thumb.jpg"></a> -->
 		</div>
 	</div>
+<!-- Hiding band sections for now
     <div class="row navbar content-title band-title" id="music-groups">
         <div class="ten columns centered">
             <h2 class="centered">Young Mens Prep Academy</h2>
@@ -268,7 +379,7 @@
     <div class="row navbar content band-members ymp-content">
         <div class="inview six columns centered band-members-list" gumby-classname="onscreen" gumby-offset="200">
             <div class="twelve columns band-members-list-desc">
-                <p>Young Mens Prep. Academy's band department is sponsored and taught by Reckless Youth</p>
+				<p>Young Mens Prep Academy</p>
             </div>
         </div>
     </div>
@@ -293,7 +404,7 @@
 			</div>
 		</div>
 	</div>
-		
+-->
 	<div class="row navbar content-title board-title" id="board-members">
 		<div class="ten columns centered">
 			<h2 class="centered">Meet Us</h2>
@@ -309,7 +420,7 @@
 						</div>
 						<div class="member-odd-desc member-desc">
 							<h4>Sammy Gonzalez</h4>
-							<p>Director and Music Director, and more of a description goes in here.</p>
+							<p>Creative Director</p>
 						</div>
 					</article>
 				</section>
@@ -319,17 +430,9 @@
 					<article class="valign row">
 						<div class="member-desc">
 							<h4>Virginia Akar</h4>
-							<p>Director, and more of a description goes over here.</p>
-						</div>
-					</article>
-				</section>
-			</div>
-			<div class="row content member-3">
-				<section class="six centered columns board-entry">
-					<article class="valign row">
-						<div class="member-desc">
-							<h4>Jefferey Miller</h4>
-							<p>Chairman, and more of a description goes into here.</p>
+							<p>Executive Director</p>
+							<h4 class="second-member">Jefferey Miller</h4>
+							<p>Chairman</p>
 						</div>
 					</article>
 				</section>
@@ -359,17 +462,23 @@
 					<p>Donations:</p>
 					<p class="text_white">Donate@YoungMusicians.us</p>
 					<br />
+					<pre>
+					Mail your tax-deductible contribution to: 
+					Attn: Young Musicians
+					36 NE 1st Street, Suite 219 
+					Miami, FL 33132 
+					</pre>
 					<br />
 					<p>Music Program:</p>
 					<p class="text_white">Sgclassical@yahoo.com</p>
 					<p>Sammy Gonzalez</p>
-					<p>Music Director</p>
+					<p>Creative Director</p>
 					<br />
 					<br />
 					<p>General Program:</p>
 					<p class="text_white">Virginia@YoungMusicians.us</p>
 					<p>Virginia Akar</p>
-					<p>Director</p>
+					<p>Executive Director</p>
 				</div>
 			</article>
 		</section>
@@ -459,9 +568,9 @@
 			$("#gallery").nanoGallery({
 				thumbnailWidth: 150,
 				thumbnailHeight: 150,
-				thumbnailHoverEffect: 'slideLeft',
+				thumbnailHoverEffect: 'none',
 				thumbnailLabel: {
-					position: 'overImageOnBottom'
+					display: 'false'
 				}
 			});
 			$('.active form').card({
@@ -500,7 +609,7 @@
 	</script>
 	<script>
 		var elem = document.querySelector('.switchery-switch');
-		var switchery = new Switchery(elem);
+		var switchery = new Switchery(elem, { color: '#3268D3'});
 	</script>
 </body>
 </html>

@@ -29,6 +29,7 @@ $donate-bg: url("../img/backgrounds/donate.jpg");
 $ryouth-bg: url("../img/backgrounds/ryouth.jpg");
 $ymp-bg: url("../img/backgrounds/YMP.jpeg");
 $contact-bg: url("../img/backgrounds/contact.jpg");
+$facebook-logo: url("../img/facebook.png");
 
 // 1. Mixins
 ////////////////////////////////////////////////
@@ -39,8 +40,6 @@ $contact-bg: url("../img/backgrounds/contact.jpg");
   -o-#{$name}: #{$argument};
   #{$name}: #{$argument};
 }
-
-
 
 // 2. General Positioning
 //////////////////////////////////////////////
@@ -66,6 +65,7 @@ $contact-bg: url("../img/backgrounds/contact.jpg");
 body { background-color: $black; }
 .text_yellow { color: $logo-yellow; }
 .text_white { color: $white; }
+.text_blue { color: blue; }
 .content { background-color: $black; }
 
 // 4. Slide Specific Styling
@@ -136,8 +136,65 @@ body { background-color: $black; }
 	.mission-desc p:last-child {
 		text-align: center;
 	}
+// Social Aspects 
+.social-aspects {
+	margin-left: $none;
+}
+.mailing-list {
+	margin-top: 6px;
+	div {
+		display: inline;
 
+		img {
+			position: absolute;
+			padding-left: 6px;
+			padding-top: 2px;
+		}
+	}
+}
+	.mailing-list span {
+		color: #A2A2A2;
+		margin-right: 0.2em;
+	}
+	.mailing-list input {
+		height: 36px;
+		width: 60%;
+		color: $white;
+		border: $border;
+		border-radius: 3px;
+		background-color: $black;
+		padding-left: 8px;
+	}
 
+.soc-icon {
+	margin-top: 8px;
+}
+// Who We Are
+.about-us-content-title {
+	font-weight: 600;
+	font-size: 2em;
+	color: $white;
+}
+.about-us-desc {
+	text-align: left;
+	margin-bottom: 1.5em;
+	margin-top: 0.7em;
+	line-height: 1.4em;
+}
+.music-matters-title {
+	margin-top: 0.5em;
+}
+.music-matters {
+}
+	.music-matters p {
+		text-align: left;
+		margin-top: 0.7em;
+	}
+	.music-matters li {
+		text-align: left;
+		margin-left: 4em;
+		color: $white;
+	}
 // News Header
 .news-title { 
 	// Allow background image to fit comfortably
@@ -172,6 +229,16 @@ body { background-color: $black; }
 		float: left;
 		padding: 0.8em;
 	}
+#news-drawer.active {
+	display: initial;
+}
+#news-drawer-toggle {
+	display: initial;
+	cursor: pointer;
+}
+#news-drawer-toggle.active {
+		display: none;
+}
 
 // Donate Header
 .donate-title { 
@@ -195,6 +262,13 @@ body { background-color: $black; }
 		border: 1px solid $white;
 		background-color: rgba(16, 16, 116, 0.3);
 	}
+.tax-statement {
+	margin-top: 1.9em;
+	p {
+		font-size: 0.65rem;
+		margin-bottom: $none;
+	}
+}
 .drawer { 
 	background: initial;
 	box-shadow: initial;
@@ -293,7 +367,13 @@ body { background-color: $black; }
 		max-width: 100%;
 	}
 	.member-1, .member-3 {
-		background-color: #333;
+		background-color: $black;
+	}
+	.member-2 {
+		background-color: #212121;
+	}
+	.second-member {
+		margin-top: 2.5em;
 	}
 .board-picture  img {
 	border-radius: 50%;
@@ -308,6 +388,10 @@ body { background-color: $black; }
 }
 .member-desc h4 {
 	color: $logo-yellow;
+}
+.member-desc p {
+	text-align: center;
+	font-size: 1.2em;
 }
 // Contact Header
 .contact-title {
@@ -325,13 +409,17 @@ body { background-color: $black; }
 	}
 	.contact-desc {
 		text-align: right;
-		margin-left: 30%;
 
 		h4 {
 			color: $logo-yellow;
 		}
 		p {
 			margin-bottom: 2px;
+			color: $logo-yellow;
 		}
 	}
+}
+
+.italicized {
+	font-style: italic;
 }
