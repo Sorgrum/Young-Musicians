@@ -111,6 +111,10 @@ body { background-color: $black; }
 }
 .mission-img {
 	width: 49%; // I might be horrible at basic math, but I'm not sure why this works
+	position: relative; 
+	height: 0;
+	overflow: hidden; 
+
 	@include respond(all-phones) {
 		width: 80%;
 		margin-left: 10%;
@@ -119,6 +123,10 @@ body { background-color: $black; }
 }
 	.mission-img img {
 		// Resize logo image
+		max-width: 115%;
+		margin-left: -24%;
+	}
+	.mission-img iframe {
 		max-width: 115%;
 		margin-left: -24%;
 	}
@@ -147,16 +155,24 @@ body { background-color: $black; }
 
 		img {
 			position: absolute;
-			padding-left: 6px;
+			margin-left: 46px;
 			padding-top: 2px;
 		}
+		.mailinglist-submit {
+			position: absolute;
+			height: 36px;
+			padding-left: 4px;
+		}
+	form {
+		display: inline;
+	}
 	}
 }
 	.mailing-list span {
 		color: #A2A2A2;
 		margin-right: 0.2em;
 	}
-	.mailing-list input {
+	.mailing-list .email-input {
 		height: 36px;
 		width: 60%;
 		color: $white;
@@ -207,7 +223,7 @@ body { background-color: $black; }
 	padding-bottom: $default-padding;
 	margin-bottom: $none;
 	background-image: $news-bg;
-	@include vendor-prefix(background-size, cover);
+	background-repeat: repeat-y;
 }
 .news-entry {
 	border-radius: 3px;
@@ -391,6 +407,7 @@ body { background-color: $black; }
 }
 .member-desc p {
 	text-align: center;
+	color: $white;
 	font-size: 1.2em;
 }
 // Contact Header
@@ -415,7 +432,6 @@ body { background-color: $black; }
 		}
 		p {
 			margin-bottom: 2px;
-			color: $logo-yellow;
 		}
 	}
 }

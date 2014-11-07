@@ -1717,10 +1717,12 @@ body { background-color: black; }
 
 .mission { max-width: 80%; background-color: black; }
 
-.mission-img { width: 49%; }
+.mission-img { width: 49%; position: relative; height: 0; overflow: hidden; }
 @media only screen and (max-width: 767px) { .mission-img { width: 80%; margin-left: 10%; margin-right: 10%; } }
 
 .mission-img img { max-width: 115%; margin-left: -24%; }
+
+.mission-img iframe { max-width: 115%; margin-left: -24%; }
 
 .mission-desc { width: 50%; float: right; margin-top: 1em; }
 @media only screen and (max-width: 767px) { .mission-desc { width: 80%; margin-top: 1em; margin-left: 10%; margin-right: 10%; } }
@@ -1731,11 +1733,13 @@ body { background-color: black; }
 
 .mailing-list { margin-top: 6px; }
 .mailing-list div { display: inline; }
-.mailing-list div img { position: absolute; padding-left: 6px; padding-top: 2px; }
+.mailing-list div img { position: absolute; margin-left: 46px; padding-top: 2px; }
+.mailing-list div .mailinglist-submit { position: absolute; height: 36px; padding-left: 4px; }
+.mailing-list div form { display: inline; }
 
 .mailing-list span { color: #A2A2A2; margin-right: 0.2em; }
 
-.mailing-list input { height: 36px; width: 60%; color: white; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 3px; background-color: black; padding-left: 8px; }
+.mailing-list .email-input { height: 36px; width: 60%; color: white; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 3px; background-color: black; padding-left: 8px; }
 
 .soc-icon { margin-top: 8px; }
 
@@ -1751,7 +1755,7 @@ body { background-color: black; }
 
 .news-title { margin-bottom: 0px; }
 
-.news-content { max-width: 100%; padding-top: 20px; padding-bottom: 20px; margin-bottom: 0px; background-image: url("../img/backgrounds/news.png"); -webkit-background-size: cover; -ms-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.news-content { max-width: 100%; padding-top: 20px; padding-bottom: 20px; margin-bottom: 0px; background-image: url("../img/backgrounds/news.png"); background-repeat: repeat-y; }
 
 .news-entry { border-radius: 3px; background-color: rgba(0, 0, 0, 0.5); margin-bottom: 20px; }
 
@@ -1834,7 +1838,7 @@ body { background-color: black; }
 
 .member-desc h4 { color: #f7941d; }
 
-.member-desc p { text-align: center; font-size: 1.2em; }
+.member-desc p { text-align: center; color: white; font-size: 1.2em; }
 
 .contact-title { margin-bottom: 0px; }
 
@@ -1842,6 +1846,6 @@ body { background-color: black; }
 .contact-content .contact-img { max-width: 450px; }
 .contact-content .contact-desc { text-align: right; }
 .contact-content .contact-desc h4 { color: #f7941d; }
-.contact-content .contact-desc p { margin-bottom: 2px; color: #f7941d; }
+.contact-content .contact-desc p { margin-bottom: 2px; }
 
 .italicized { font-style: italic; }

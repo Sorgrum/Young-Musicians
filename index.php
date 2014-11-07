@@ -1,3 +1,40 @@
+<?php
+
+require("db-info.php"); 
+$mailinglist_email = $_POST['mailinglist-email'];
+
+$query_params = array(
+    ':email_address' => $_POST['mailinglist-email'],
+);
+
+$query = "
+    INSERT INTO mailing_list (
+        email_id,
+        email_address
+    ) VALUES (
+        NULL,
+        :email_address
+    )
+";
+
+
+if (!empty($_POST)) {
+	if(!filter_var($mailinglist_email, FILTER_VALIDATE_EMAIL)) {
+		echo "<div class='error message'><h3>Could not register email.</h3><p>This email is either already registered or invalid.</p></div>";
+	}
+	else {
+		try {
+		    // Execute the query to create the email
+		    $stmt = $db->prepare($query);
+		    $result = $stmt->execute($query_params);
+			echo "<div class='success message'><h3>Success!</h3><p>You have been successfully added to the mailing list.</p></div>";
+		}
+		catch(PDOException $ex) {
+			echo "<div class='error message'><h3>Could not register email.</h3><p>This email is either already registered or invalid.</p></div>";
+		} 
+	}
+}
+?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -37,7 +74,8 @@
 		 However, there is a blank style.css in the css directory should you prefer -->
 	<link rel="stylesheet" href="css/gumby.css">
 	<link href="bower_components/gallery/css/nanogallery.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="js/libs/card/lib/css/card.css">
+	<!--<link rel="stylesheet" type="text/css" href="js/libs/card/lib/css/card.css">-->
+	<link rel="stylesheet" type="text/css" href="css/notificationbanner.css">
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="js/libs/switchery/dist/switchery.css" />
@@ -64,8 +102,8 @@
 					<li><a href="#donate">Donate</a></li>
 					<li><a href="#news">News</a></li>
 					<li><a href="#photos">Photos</a></li>
-					<li><a href="#music-groups">Musicians</a></li>
-					<li><a href="#donors">Donors</a></li>
+					<!--<li><a href="#music-groups">Musicians</a></li>-->
+					<!--<li><a href="#donors">Donors</a></li>-->
 					<li><a href="#board-members">Our Board</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -76,8 +114,10 @@
 	<div class="row navbar content mission" id="mission">
 		<div class="twelve columns">
 			<article class="valign row">
-				<div class="mission-img">
-					<img src="img/YM_Logo.jpg">
+				<div class="mission-img" style="height: initial; overflow: initial;">
+					<!-- Logo remporarily removed -->
+					<!--<img src="img/YM_Logo.jpg">-->
+					<iframe width="560" height="315" allowfullscreen="" frameborder="0" src="//www.youtube.com/embed/0nyxXRmHu_c?list=UUlezS5HdC4lNzDpcTRgc0OA" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="mission-desc">
 					<p><span class="text_yellow">Mission</span> - To enrich the lives of children by providing free after-school music programs in schools  with limited or no music instruction.</p>
@@ -93,8 +133,8 @@
 				<div class="row">
 					<div class="twelve columns mailing-list">
 						<div><span>Join Mailing List:</span></div>
-						<div><input type="email" placeholder="johnsmith@email.com" /></div>
-						<div><img src="img/icon.png" /></div>
+						<div><form action="index.php" method="post"><input type="email" class="email-input" placeholder="johnsmith@email.com" name="mailinglist-email" /></div>
+						<div><input type="image" class="mailinglist-submit" src="https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-right-01-128.png" name="submit" /></form><a href="https://www.facebook.com/youngmusiciansllc?ref=bookmarks" alt="Facebook Page"><img src="img/icon.png" /></a></div>
 					</div>
 				</div>
 			</div>
@@ -146,7 +186,7 @@
 				<div class="ten columns centered">
 					<div class="six columns centered">
 						<div class="twelve columns centered">
-							<div class="xlarge btn metro rounded donate-paypal"><a href="#">Donate on PayPal</a></div>
+							<div class="xlarge btn metro rounded donate-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6Y85H2C8XJPMY">Donate on PayPal</a></div>
 						</div>
 					</div>
 				</div>
@@ -170,6 +210,24 @@
 		<div class="four columns centered news-feed">
 			<div class="row">
 				<div class="twelve columns news-entry">
+					<h4>10/24/14 HALLOWEEN BLOCK PARTY!</h4>
+					<p>We are excited to perform at a Halloween block party. There will be performances by Young Men's Prep Academy, San Marino, &amp; YM Guitar Quartet.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns news-entry">
+					<h4>9//09/14 MENTORS</h4>
+					<p>We want to welcome the band San Marino into our family, a new youth rock band and guitar quartet. More news, shows and side by sides to come.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns news-entry">
+					<h4>9/02/14 BACK TO SCHOOL</h4>
+					<p>We are happy to begin our 3rd year. We are currently looking towards expanding to a second school.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns news-entry">
 					<h4>7/01/14 YOUNG MUSICIANS SUMMER GUITAR CAMP</h4>
 					<p>For the month of July Young Musicians will be holding guitar club at Young Mens Prep. </p>
 				</div>
@@ -180,34 +238,26 @@
 					<p>Reckless Youth has entered the studio to record their single "Hurricane". They wanted to make sure they had at least one recording done before Cristi moved onto Georgetown. Hurricane will be released on Itunes, and other streaming sites in August. </p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>6/02/14 SAMMY GONZALEZ GUITAR RECITAL @ STAGE</h4>
-					<p>Performance by Reckless Youth &amp; many other Young Musicians. 6-730P @ THE STAGE, Miami </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>5/26/14 YOUNG MENS END OF YEAR SHOW</h4>
-					<p>Catch the guitar club &amp; Reckless Youth @ Young Mens Prep Academy 7P, $5. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns news-entry">
-					<h4>4/15/14 CONGRATS TO CRISITI SCHLESINGER</h4>
-					<p> Young Musicians Cristi Schlesinger has been accepted to NYU &amp; Georgetown University. We wish her the best as she graduates and moves on from Reckless Youth as the groups lead singer. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="twelve columns">
-					<div class="row">
-						<div class="twelve columns centered">
-							<a class="toggle" id="news-drawer-toggle" gumby-on="click" gumby-trigger="#news-drawer">More...</a>
-						</div>
+			<div class="row"><div class="twelve columns"><div class="row"><div class="twelve columns centered"><a class="toggle" id="news-drawer-toggle" gumby-on="click" gumby-trigger="#news-drawer">More...</a></div></div></div></div>
+			<div class="drawer" id="news-drawer">
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>6/02/14 SAMMY GONZALEZ GUITAR RECITAL @ STAGE</h4>
+						<p>Performance by Reckless Youth &amp; many other Young Musicians. 6-730P @ THE STAGE, Miami </p>
 					</div>
 				</div>
-			</div>
-			<div class="drawer" id="news-drawer">
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>5/26/14 YOUNG MENS END OF YEAR SHOW</h4>
+						<p>Catch the guitar club &amp; Reckless Youth @ Young Mens Prep Academy 7P, $5. </p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns news-entry">
+						<h4>4/15/14 CONGRATS TO CRISITI SCHLESINGER</h4>
+						<p> Young Musicians Cristi Schlesinger has been accepted to NYU &amp; Georgetown University. We wish her the best as she graduates and moves on from Reckless Youth as the groups lead singer. </p>
+					</div>
+				</div>
 				<div class="row">
 					<div class="twelve columns news-entry">
 						<h4>3/25/14 YOUNG MENS GUITAR CLUB GIVING BACK</h4>
@@ -349,24 +399,19 @@
 		<div id="gallery">
 			<a href="img/gallery/8.jpg" data-ngthumb="img/gallery/8_thumb.jpg"></a>
 			<a href="img/gallery/9.jpg" data-ngthumb="img/gallery/9_thumb.jpg"></a>
-			<a href="img/gallery/10.jpg" data-ngthumb="img/gallery/10_thumb.jpg"></a>
 			<a href="img/gallery/11.jpg" data-ngthumb="img/gallery/11_thumb.jpg"></a>
 			<a href="img/gallery/12.jpg" data-ngthumb="img/gallery/12_thumb.jpg"></a>
 			<a href="img/gallery/13.jpg" data-ngthumb="img/gallery/13_thumb.jpg"></a>
 			<a href="img/gallery/14.jpg" data-ngthumb="img/gallery/14_thumb.jpg"></a>
 			<a href="img/gallery/15.jpg" data-ngthumb="img/gallery/15_thumb.jpg"></a>
-			<a href="img/gallery/16.jpg" data-ngthumb="img/gallery/16_thumb.jpg"></a>
 			<a href="img/gallery/17.jpg" data-ngthumb="img/gallery/17_thumb.jpg"></a>
 			<a href="img/gallery/18.jpg" data-ngthumb="img/gallery/18_thumb.jpg"></a>
 			<a href="img/gallery/19.jpg" data-ngthumb="img/gallery/19_thumb.jpg"></a>
-			<a href="img/gallery/20.jpg" data-ngthumb="img/gallery/20_thumb.jpg"></a>
 			<a href="img/gallery/21.jpg" data-ngthumb="img/gallery/21_thumb.jpg"></a>
-			<a href="img/gallery/22.jpg" data-ngthumb="img/gallery/22_thumb.jpg"></a>
 			<a href="img/gallery/23.jpg" data-ngthumb="img/gallery/23_thumb.jpg"></a>
 			<a href="img/gallery/24.jpg" data-ngthumb="img/gallery/24_thumb.jpg"></a>
 			<a href="img/gallery/25.jpg" data-ngthumb="img/gallery/25_thumb.jpg"></a>
 			<a href="img/gallery/26.jpg" data-ngthumb="img/gallery/26_thumb.jpg"></a>
-			<a href="img/gallery/27.jpg" data-ngthumb="img/gallery/27_thumb.jpg"></a>
 <!-- Working with spacing			<a href="img/gallery/28.jpg" data-ngthumb="img/gallery/28_thumb.jpg"></a> -->
 		</div>
 	</div>
@@ -420,7 +465,7 @@
 						</div>
 						<div class="member-odd-desc member-desc">
 							<h4>Sammy Gonzalez</h4>
-							<p>Creative Director</p>
+							<p>President/Creative Director</p>
 						</div>
 					</article>
 				</section>
@@ -455,30 +500,30 @@
 				<div class="contact-desc">
 					<h4>Inquiries for</h4>
 					<br />
-					<p>General:</p>
-					<p class="text_white">Info@YoungMusicians.us</p>
+					<p class="text_yellow">General:</p>
+					<p class="text_white"><a href="mailto:Donate@YoungMusicians.us">Info@YoungMusicians.us</a></p>
 					<br />
 					<br />
-					<p>Donations:</p>
-					<p class="text_white">Donate@YoungMusicians.us</p>
+					<p class="text_yellow">Donations:</p>
+					<p class="text_white"><a href="mailto:Donate@YoungMusicians.us">Donate@YoungMusicians.us</a></p>
 					<br />
-					<pre>
-					Mail your tax-deductible contribution to: 
-					Attn: Young Musicians
+					<p class="text_yellow">Mail your tax-deductible contribution to: </p>
+					<pre class="text_white">
+					Young Musicians Org.
 					36 NE 1st Street, Suite 219 
 					Miami, FL 33132 
 					</pre>
 					<br />
-					<p>Music Program:</p>
-					<p class="text_white">Sgclassical@yahoo.com</p>
-					<p>Sammy Gonzalez</p>
-					<p>Creative Director</p>
+					<p class="text_yellow">Music Program:</p>
+					<p class="text_white"><a href="mailto:Sgclassical@yahoo.com">Sgclassical@yahoo.com</a></p>
+					<p class="text_yellow">Sammy Gonzalez</p>
+					<p class="text_yellow">President/Creative Director</p>
 					<br />
 					<br />
-					<p>General Program:</p>
-					<p class="text_white">Virginia@YoungMusicians.us</p>
-					<p>Virginia Akar</p>
-					<p>Executive Director</p>
+					<p class="text_yellow">General Program:</p>
+					<p class="text_white"><a href="mailto:Virginia@YoungMusicians.us">Virginia@YoungMusicians.us</a></p>
+					<p class="text_yellow">Virginia Akar</p>
+					<p class="text_yellow">Executive Director</p>
 				</div>
 			</article>
 		</section>
@@ -610,6 +655,29 @@
 	<script>
 		var elem = document.querySelector('.switchery-switch');
 		var switchery = new Switchery(elem, { color: '#3268D3'});
+	</script>
+	<script type="text/javascript">
+	var myMessages = ['info','warning','error','success'];
+function hideAllMessages() {
+         var messagesHeights = new Array(); // this array will store height for each
+     
+         for (i=0; i<myMessages.length; i++) {
+          messagesHeights[i] = $('.' + myMessages[i]).outerHeight(); // fill array
+          $('.' + myMessages[i]).css('top', -messagesHeights[i]); //move element outside viewport     
+         }
+}
+function showMessage(type) {
+    $('.'+ type +'-trigger').click(function(){
+          hideAllMessages();                  
+          $('.'+type).animate({top:"0"}, 500);
+    });
+}
+	$(document).ready(function(){
+    	 // When message is clicked, hide it
+    	 $('.message').click(function(){              
+    	          $(this).animate({top: -$(this).outerHeight()}, 500);
+    	  });        
+	});
 	</script>
 </body>
 </html>
