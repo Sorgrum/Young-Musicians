@@ -1,0 +1,441 @@
+// _custom.scss
+// Written by Marcelo Gheiler
+
+// Table of Conents
+/////////////////////////////////////////////////
+//
+// Variables positioned at top for quick editing
+//
+// 1. Mixins
+// 2. General Positioning
+// 3. Slide Specific Styling
+// 
+
+$white: #fff;
+$black: #000;
+$logo-yellow: #F7941D;
+$logo-red: #BF1E2E;
+$title-color: #A3A3A3;
+$border: 1px solid rgba(255, 255, 255, .4);
+$news-entry: rgba(0, 0, 0, 0.5);
+
+$none: 0px;
+$default-margin: 20px;
+$default-padding: 20px;
+$navbar-height: 60px;
+
+$news-bg: url("../img/backgrounds/news.png");
+$donate-bg: url("../img/backgrounds/donate.jpg");
+$ryouth-bg: url("../img/backgrounds/ryouth.jpg");
+$ymp-bg: url("../img/backgrounds/YMP.jpeg");
+$contact-bg: url("../img/backgrounds/contact.jpg");
+$facebook-logo: url("../img/facebook.png");
+
+// 1. Mixins
+////////////////////////////////////////////////
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+// 2. General Positioning
+//////////////////////////////////////////////
+
+
+// Account for navbar height
+.content-wrapper {
+	margin-top: $navbar-height + 20;
+}
+
+// Center Navigation Bars
+.centered { text-align: center; }
+.centered h2 { text-align: center; }
+
+
+
+.content p { color: $white; }
+
+
+// 3. General Coloring
+///////////////////////////////////////////
+
+body { background-color: $black; }
+.text_yellow { color: $logo-yellow; }
+.text_white { color: $white; }
+.text_blue { color: blue; }
+.content { background-color: $black; }
+
+// 4. Slide Specific Styling
+//////////////////////////////////////////
+
+
+// Navigation Bar
+#nav1 { 
+	max-width: 100%; 
+	padding-left: 1px;
+	background-color: $black;
+	border-bottom: $border;
+	@include respond(all-phones) {
+		margin-bottom: $none;
+	}
+	& li a:hover {
+		background-color: $logo-yellow;
+	}
+}
+.navbar ul { float: right; }
+.navbar .logo a img { 
+	height: 60px; 
+	max-height: 100%;
+}
+
+// Slide Headers
+.content-title {
+	max-width: 100%;
+	border-top: $border;
+	border-bottom: $border;
+	background-color: $black;
+}
+.content-title div h2 {
+	color: $title-color;
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+// Mission Slide 
+.mission {
+	max-width: 80%;
+	background-color: $black;
+}
+.mission-img {
+	width: 49%; // I might be horrible at basic math, but I'm not sure why this works
+	position: relative; 
+	height: 0;
+	overflow: hidden; 
+
+	@include respond(all-phones) {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+	.mission-img img {
+		// Resize logo image
+		max-width: 115%;
+		margin-left: -24%;
+	}
+	.mission-img iframe {
+		max-width: 115%;
+		margin-left: -24%;
+	}
+.mission-desc {
+	width: 50%;
+	float: right;
+	margin-top: 1em;
+	@include respond(all-phones) {
+		width: 80%;
+		margin-top: 1em;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+	.mission-desc p:last-child {
+		text-align: center;
+	}
+// Social Aspects 
+.social-aspects {
+	margin-left: $none;
+}
+.mailing-list {
+	margin-top: 6px;
+	div {
+		display: inline;
+
+		img {
+			position: absolute;
+			margin-left: 46px;
+			padding-top: 2px;
+		}
+		.mailinglist-submit {
+			position: absolute;
+			height: 36px;
+			padding-left: 4px;
+		}
+	form {
+		display: inline;
+	}
+	}
+}
+	.mailing-list span {
+		color: #A2A2A2;
+		margin-right: 0.2em;
+	}
+	.mailing-list .email-input {
+		height: 36px;
+		width: 60%;
+		color: $white;
+		border: $border;
+		border-radius: 3px;
+		background-color: $black;
+		padding-left: 8px;
+	}
+
+.soc-icon {
+	margin-top: 8px;
+}
+// Who We Are
+.about-us-content-title {
+	font-weight: 600;
+	font-size: 2em;
+	color: $white;
+}
+.about-us-desc {
+	text-align: left;
+	margin-bottom: 1.5em;
+	margin-top: 0.7em;
+	line-height: 1.4em;
+}
+.music-matters-title {
+	margin-top: 0.5em;
+}
+.music-matters {
+}
+	.music-matters p {
+		text-align: left;
+		margin-top: 0.7em;
+	}
+	.music-matters li {
+		text-align: left;
+		margin-left: 4em;
+		color: $white;
+	}
+// News Header
+.news-title { 
+	// Allow background image to fit comfortably
+	margin-bottom: $none;
+}
+// News Slide
+.news-content {
+	max-width: 100%;
+	padding-top: $default-padding;
+	padding-bottom: $default-padding;
+	margin-bottom: $none;
+	background-image: $news-bg;
+	background-repeat: repeat-y;
+}
+.news-entry {
+	border-radius: 3px;
+	background-color: $news-entry;
+	margin-bottom: $default-margin;
+}
+	.news-entry h4 { 
+		color: $logo-yellow;
+		font-weight: bold;
+		text-align: left;
+		padding: 0.8em;
+		padding-bottom: 0px;
+	}
+	.news-entry p {
+		padding: 0.8em;
+		color: #BABABA;
+	}
+	.news-entry a { 
+		float: left;
+		padding: 0.8em;
+	}
+#news-drawer.active {
+	display: initial;
+}
+#news-drawer-toggle {
+	display: initial;
+	cursor: pointer;
+}
+#news-drawer-toggle.active {
+		display: none;
+}
+
+// Donate Header
+.donate-title { 
+	// Allow background image to fit comfortably
+	margin-bottom: $none;
+}
+
+//Donate Slide
+.donate-content { 
+	max-width: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	background: $donate-bg;
+	@include vendor-prefix(background-size, cover);
+}
+	.donate-onsite {
+		border: 1px solid $white;
+		background-color: rgba(72, 67, 11, 0.5);
+	}
+	.donate-paypal {
+		border: 1px solid $white;
+		background-color: rgba(16, 16, 116, 0.3);
+	}
+.tax-statement {
+	margin-top: 1.9em;
+	p {
+		font-size: 0.65rem;
+		margin-bottom: $none;
+	}
+}
+.drawer { 
+	background: initial;
+	box-shadow: initial;
+}
+	.drawer.active {
+		margin-top: 3em;
+	}
+.card-wrapper {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1em;
+	// The card will never be bigger than this
+	width: 400px;
+	margin-left: 19%;
+	border-radius: 10px;
+	border: 1px solid $white;
+}
+.form-container .field:last-child {
+	margin-bottom: $none;
+}
+.card.identified .front {
+	background-color: $black;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.card.identified .back {
+	background-color: $black;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.recurring-payment {
+	padding: 0.4em;
+	background-color: $white;
+	background-color: rgba(255, 255, 255, 0.75);
+	border-radius: 4px;
+}
+	.recurring-payment span{ 
+		float: left;
+	}
+	.recurring-payment p { 
+		float: left;
+		display: inline-block;
+		margin-left: 3%;
+		margin-bottom: $none;
+		line-height: 1.75em;
+		color: black;
+	}
+// Band Members General Styling
+.band-title {
+    margin-bottom: $none;
+}
+.band-members {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	margin-bottom: $none;
+}
+	.band-members-list {
+		visiblity: hidden;
+		padding: 1em;
+		border-radius: 10px;
+		border: 5px solid $white;
+		background-color: $white;
+		background-color: rgba(255, 255, 255, 0.75);
+	}
+		.band-members-list div p {
+			color: $black;
+		}
+		.band-members-list.onscreen {
+			visibility: visible;
+		}
+// Young Mens Prep Content
+.ymp-content {
+	background: $ymp-bg;
+	@include vendor-prefix(background-size, cover);
+}
+.ymp-content.row {
+	max-width: 100%;
+}
+
+// Reckless Content
+.ryouth-content {
+	background: $ryouth-bg;
+	@include vendor-prefix(background-size, cover);
+}
+.ryouth-content.row {
+	max-width: 100%;
+}
+
+// Board Members Header
+.content-title.board-title {
+	margin-bottom: $none;
+}
+// Board Members Content
+.board-members {
+	max-width: 100%;
+	padding: $none;
+}
+	.board-members div {
+		max-width: 100%;
+	}
+	.member-1, .member-3 {
+		background-color: $black;
+	}
+	.member-2 {
+		background-color: #212121;
+	}
+	.second-member {
+		margin-top: 2.5em;
+	}
+.board-picture  img {
+	border-radius: 50%;
+	width: 300px;
+}
+
+.member-odd-desc {
+	margin-left: 15%;
+}
+.member-even-desc {
+	margin-right: 15%;
+}
+.member-desc h4 {
+	color: $logo-yellow;
+}
+.member-desc p {
+	text-align: center;
+	color: $white;
+	font-size: 1.2em;
+}
+// Contact Header
+.contact-title {
+	margin-bottom: $none;
+}
+// Contact Content
+.contact-content {
+	padding: 5% 0px;
+	max-width: 100%;
+	background: $contact-bg;
+	@include vendor-prefix(background-position, cover);
+
+	.contact-img {
+		max-width: 450px;
+	}
+	.contact-desc {
+		text-align: right;
+
+		h4 {
+			color: $logo-yellow;
+		}
+		p {
+			margin-bottom: 2px;
+		}
+	}
+}
+
+.italicized {
+	font-style: italic;
+}
