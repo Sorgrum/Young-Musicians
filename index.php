@@ -193,6 +193,18 @@ if (!empty($_POST)) {
 			</div>
 			<div class="row">
 				<div class="ten columns centered">
+					<div class="six columns centered">
+						<p class="donate-mail-deductable">
+							Mail Your Tax-Deductible Contribution to:<br />
+							Young Musicians Organization<br />
+							36 NE 1st St, Suite 219<br />
+							Miami, FL 33132 
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="ten columns centered">
 					<div class="eight columns centered tax-statement">
 						<p>Established in 2011, Young Musicians is a 501(c)(3) organization; all donations are tax-deductible to the full extent permitted by law.</p>
 					</div>
